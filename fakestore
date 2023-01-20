@@ -1,0 +1,28 @@
+--Create a fashion store database
+
+CREATE TABLE julias_store (id INTEGER PRIMARY KEY, item_name TEXT, price INTEGER, vendor TEXT, sku INTEGER, section TEXT);
+
+INSERT INTO julias_store VALUES
+(1, "Crochet_Top", 35, "Julia_Troike", 1234501, "WOMENS"),
+(2, "Crochet_Bottoms", 65, "Julia_Troike", 1234502, "WOMENS"),
+(3, "loafers", 95, "snood", 1234503, "MENS"),
+(4, "Sunglasses", 15, "VISION", 1234504, "ACCESSORIES"),
+(5, "Butterfly_Top", 35, "Julia_Troike", 1234505, "WOMENS"),
+(6, "Blue_Top", 35, "GLAM", 1234506, "WOMENS"),
+(7, "Purse", 35, "Chanel", 1234507, "ACCESSORIES"),
+(8, "Evening Gown", 335, "Versace", 1234508, "WOMENS"),
+(9, "Blazer", 35.50, "GGGS", 1234509, "MENS"),
+(10, "Slacks", 35.50, "GGS", 1234510, "MENS"),
+(11, "Leggings", 35.50, "Julia_Troike", 1234511, "WOMENS"),
+(12, "Fanny_Pack", 35.50, "Julia_Troike", 1234512, "ACCESSORIES"),
+(13, "Velvet_Top", 35.50, "Julia_Troike", 1234513, "WOMENS"),
+(14, "Chinos", 35.50, "Julia_Troike", 1234514, "MENS"),
+(15, "Ring", 35.50, "Julia_Troike", 1234515, "ACCESSORIES");
+
+--display the database ordered by price
+SELECT * FROM julias_store 
+ORDER BY price;
+
+--how many items are in each section?
+SELECT "section", COUNT(*) FROM julias_store GROUP BY "section";
+
